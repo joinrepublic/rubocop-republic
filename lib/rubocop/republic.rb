@@ -1,3 +1,4 @@
+require 'yaml'
 require "rubocop/republic/version"
 
 module RuboCop
