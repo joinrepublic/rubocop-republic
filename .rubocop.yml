@@ -1,3 +1,7 @@
 RepublicMonolith/PunditPolicyShouldHaveShowCheck:
   Include:
     - "**/policies/**/*"
+
+RepublicMonolith/GQLTypesShouldHaveIncludeAuthorization:
+  Include:
+    - "**/types/**/*"

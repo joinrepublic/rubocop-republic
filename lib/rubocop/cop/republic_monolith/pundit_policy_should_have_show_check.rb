@@ -17,11 +17,15 @@ module RuboCop
           add_offense(node)
         end
 
+        private
+
         def policy_class?(node)
           node.identifier.source =~ /.*Policy$/
         end
 
         def has_show_method?(node)
+          return false unless node.body
+
           node.body.each_node(:def) do |method_node|
             return true if method_node.method_name == :show?
           end
@@ -34,8 +38,6 @@ module RuboCop
           parent_policy_data = self.class.policies_data.find { |h| h[node.parent_class.source] }
           parent_policy_data[node.parent_class.source]['show?']
         end
-
-        private
 
         def self.policies_data
           @policies_data ||= JSON.parse(%x[bundle exec rake rubocop_republic:load_policy_checks]).freeze

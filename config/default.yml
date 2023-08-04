@@ -1,6 +1,11 @@
 # Write it!
 
+RepublicMonolith/GQLTypesShouldHaveIncludeAuthorization:
+  Description: 'Every GQL type should have include_authorization method call.'
+  Enabled: true
+  VersionAdded: '0.1.2'
+
 RepublicMonolith/PunditPolicyShouldHaveShowCheck:
   Description: 'Every Pundit policy should have show? method.'
   Enabled: true
-  VersionAdded: '0.1.0'
+  VersionAdded: '0.1.1'
