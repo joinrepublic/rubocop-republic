@@ -40,7 +40,8 @@ module RuboCop
         end
 
         def self.policies_data
-          @policies_data ||= JSON.parse(%x[bundle exec rake rubocop_republic:load_policy_checks]).freeze
+          data = %x[bundle exec rake rubocop_republic:load_policy_checks]
+          @policies_data ||= JSON.parse(data.gsub!(/.*?(?=\[\{)/im, "")).freeze
         end
       end
     end
