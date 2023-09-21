@@ -1,4 +1,7 @@
-# Write it!
+RepublicMonolith/AvoidKeywordArgumentsInSidekiqWorkers:
+  Description: 'Sidekiq does not support keyword args.'
+  Enabled: true
+  VersionAdded: '0.1.4'
 
 RepublicMonolith/GQLTypesShouldHaveIncludeAuthorization:
   Description: 'Every GQL type should have include_authorization method call.'

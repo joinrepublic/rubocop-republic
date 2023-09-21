@@ -3,9 +3,8 @@
 module RuboCop
   module Cop
     module RepublicMonolith
-      # TODO: Write cop description and example of bad / good code. For every
-      # `SupportedStyle` and unique configuration, there needs to be examples.
-      # Examples must have valid Ruby syntax. Do not use upticks.
+      # Pundit policy should have include_authorization to avoid
+      # unacceptable data access in GQL API.
       #
       class GQLTypesShouldHaveIncludeAuthorization < Base
         MSG = 'Missed include_authorization method call in GQL type.'

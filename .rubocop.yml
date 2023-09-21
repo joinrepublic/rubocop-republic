@@ -5,3 +5,7 @@ RepublicMonolith/PunditPolicyShouldHaveShowCheck:
 RepublicMonolith/GQLTypesShouldHaveIncludeAuthorization:
   Include:
     - "**/types/**/*"
+
+RepublicMonolith/AvoidKeywordArgumentsInSidekiqWorkers:
+  Include:
+    - "**/workers/**/*"
