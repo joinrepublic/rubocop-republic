@@ -8,6 +8,11 @@ RepublicMonolith/GQLTypesShouldHaveIncludeAuthorization:
   Enabled: true
   VersionAdded: '0.1.2'
 
+RepublicMonolith/PunditPolicyShouldHaveScopeClass:
+  Description: 'Every Pundit policy should have Scope class.'
+  Enabled: info
+  VersionAdded: '0.1.5'
+
 RepublicMonolith/PunditPolicyShouldHaveShowCheck:
   Description: 'Every Pundit policy should have show? method.'
   Enabled: true

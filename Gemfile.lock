@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rubocop-republic (0.1.4)
+    rubocop-republic (0.1.5)
       rubocop
 
 GEM
