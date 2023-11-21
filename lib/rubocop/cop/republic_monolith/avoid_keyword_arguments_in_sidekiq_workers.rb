@@ -1,3 +1,4 @@
+require 'byebug'
 # frozen_string_literal: true
 
 module RuboCop
@@ -20,6 +21,8 @@ module RuboCop
         private
 
         def sidekiq_worker_class?(node)
+          return false unless node.body
+
           node.body.each_node(:send) do |send_node|
             arg_value = send_node.arguments&.first&.const_name
             return true if send_node.method_name == :include && arg_value == 'Sidekiq::Worker'
