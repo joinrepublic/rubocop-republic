@@ -35,8 +35,10 @@ module RuboCop
         def parent_class_has_show_method?(node)
           return false unless node.parent_class
 
-          parent_policy_data = self.class.policies_data.find { |h| h[node.parent_class.source] }
-          parent_policy_data[node.parent_class.source]['show?']
+          parent_class_name = node.parent_class.source.delete_prefix("::")
+          parent_policy_data = self.class.policies_data.find { |h| h[parent_class_name] }
+
+          parent_policy_data[parent_class_name]['show?']
         end
 
         def self.policies_data
